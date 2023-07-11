@@ -34,7 +34,6 @@ class HomeRequest {
       var json = await requestClient.get(
         "${APIS.template}/:$domain/:$ua",
       );
-      print(json);
       return json;
     } catch (e) {
       rethrow;
