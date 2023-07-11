@@ -47,6 +47,7 @@ class RequestClient {
         data: data,
         options: options,
       );
+      print(response);
       return _handleResponse<T>(response);
     } catch (e) {
       var exception = ApiException.from(e);

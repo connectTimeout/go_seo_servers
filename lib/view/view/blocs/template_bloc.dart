@@ -77,17 +77,16 @@ class TemplateBloc with BodyMixin<List<TemplateModelEntity>?> {
       UX.show();
       urlName = domain;
       int ua = 0;
-      var msg = await HomeRequest.getTpCreate(
+      await HomeRequest.getTpCreate(
         domain: domain,
         ua: ua,
       );
-
-      await onInit();
-      UX.hidden();
       html.window.open(
-        'http://156.233.143.202:5000$msg',
+        'http://156.233.143.202:5000',
         'new tab',
       );
+      await onInit();
+      UX.hidden();
     } catch (e) {
       UX.hidden();
     }
