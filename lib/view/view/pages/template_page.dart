@@ -122,12 +122,6 @@ class _DataTableChildren extends DataTableSource {
           onTap: () {
             onTap(data[index].domain);
           },
-          // () {
-          //   html.window.open(
-          //     'http://156.233.143.202:5000',
-          //     'new tab',
-          //   );
-          // },
           child: Text(data[index].domain),
         ),
       ),

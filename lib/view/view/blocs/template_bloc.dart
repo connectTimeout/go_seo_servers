@@ -71,11 +71,9 @@ class TemplateBloc with BodyMixin<List<TemplateModelEntity>?> {
     return templateList;
   }
 
-  String? urlName;
   void onOpenUrl(String? domain) async {
     try {
       UX.show();
-      urlName = domain;
       int ua = 0;
       await HomeRequest.getTpCreate(
         domain: domain,
